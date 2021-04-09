@@ -6,11 +6,15 @@
   "main": "src/index.js",
   "dependencies": {
     "@tensorflow/tfjs": "1.2.9",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-scripts": "3.0.1",
-    "react-three-fiber": "2.4.3",
-    "three": "0.106.0"
+    "axios": "^0.21.1",
+    "node-sass": "^4.14.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-scripts": "3.4.3",
+    "react-three-fiber": "5.0.1",
+    "three": "0.120.1",
+    "sass": "^1.32.8",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "typescript": "3.3.3"

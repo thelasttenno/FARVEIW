@@ -3,18 +3,19 @@ import React, {
   useRef,
   useMemo,
   useState,
-  useEffect
+  useEffect,
 } from "react";
 import ReactDOM from "react-dom";
-import { Canvas, useThree, extend } from "react-three-fiber";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { Canvas, useThree, extend, useFrame } from "react-three-fiber";
 
 import * as tf from "@tensorflow/tfjs";
 import data from "./data.json";
-
-import "./styles.css";
+import ControlPanel from "./components/ControlPanel";
+import "./styles.scss";
 import { Vector3 } from "three";
-
+import PlanetInfo from "./components/PlanetInfo";
+import Sphear from "./components/Sphear";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
 
 const numberOfPlanets = data.planets.length;
@@ -30,7 +31,7 @@ const G = tf.scalar(data.G);
 const trajSize = 240;
 const initialTraj = xInitialArray.map((x) => Array(trajSize).fill(x));
 
-function SolarSystem( props,{ dt = 0.1 }) {
+function SolarSystem(props, { dt = 0.1 }) {
   const [pos, setPos] = useState(xInitialArray);
   const [traj, setTraj] = useState(initialTraj);
   const x = useRef(xInitial);
@@ -71,37 +72,29 @@ function SolarSystem( props,{ dt = 0.1 }) {
   const handleUpdateGeometry = useCallback((self) => {
     self.verticesNeedUpdate = true;
   }, []);
+  ////////////////////////////////////////
+  const {
+    camera,
+    gl: { domElement },
+  } = useThree();
 
-  // setDisplay({ planetname: "mars" });
-  const { camera } = useThree();
+  const controls = useRef();
+  useFrame(() => controls.current.update());
+  //////////////////////////////////////////////
   return (
     <group>
-      <orbitControls args={[camera]} />
-      <ambientLight />
-      <pointLight />
+      <orbitControls
+        ref={controls}
+        args={[camera, domElement]}
+        autoRotate={false}
+        enableZoom={true}
+      />
+      <ambientLight intensity={0}/>
+      <pointLight intensity={1}/>
 
-      {pos.map((ppos, i) => {
-        return (
-          <mesh
-            key={`${data.planets[i].name}`}
-            position={ppos}
-            onClick={(e) => {
-              props.setDisplay({ planetname: `${data.planets[i].name}` });
-              props.setActive(!props.active)
-            }
-          }
-          >
-            <sphereBufferGeometry
-              args={[i === 0 ? 0.2 : data.planets[i].r * 800, 30, 30]}
-              attach="geometry"
-            />
-            <meshStandardMaterial
-              color={data.planets[i].color}
-              attach="material"
-            />
-          </mesh>
-        );
-      })}
+      {pos.map((ppos, i) => (
+        <Sphear i={i} ppos={ppos} />
+      ))}
       {traj.map((points, i) => {
         return (
           <line key={`line-${i}`}>
@@ -118,19 +111,6 @@ function SolarSystem( props,{ dt = 0.1 }) {
         );
       })}
     </group>
-  );
-}
-
-function App() {
-  let [active, setActive] = useState(false);
-  let [display, setDisplay] = useState({ planetname: null });
-  return (
-    <div className="App">
-      {active && <div><h1>{display.planetname}</h1></div>}
-      <Canvas camera={{ position: [10, 0, 0] }}>
-        <SolarSystem setDisplay={setDisplay} setActive={setActive} active={active}/>
-      </Canvas>
-    </div>
   );
 }
 
@@ -157,6 +137,24 @@ function calcA(x) {
   }
 
   return tf.stack(accelerations);
+}
+
+function App() {
+  let [active, setActive] = useState(false);
+  let [display, setDisplay] = useState({ planetname: null });
+  return (
+    <div className="App">
+      <ControlPanel />
+      {active && <PlanetInfo display={display} />}
+      <Canvas camera={{ position: [10, 0, 0] }}>
+        <SolarSystem
+          setDisplay={setDisplay}
+          setActive={setActive}
+          active={active}
+        />
+      </Canvas>
+    </div>
+  );
 }
 
 const rootElement = document.getElementById("root");
