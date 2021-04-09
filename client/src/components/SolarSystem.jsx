@@ -4,6 +4,7 @@ import React, {
   useMemo,
   useState,
   useEffect,
+  Suspense
 } from "react";
 import ReactDOM from "react-dom";
 import { Canvas, useThree, extend, useFrame } from "react-three-fiber";
@@ -86,11 +87,13 @@ function SolarSystem(props, { dt = 0.1 }) {
         autoRotate={false}
         enableZoom={true}
       />
-      <ambientLight intensity={0}/>
+      <ambientLight intensity={1}/>
       <pointLight intensity={1}/>
 
       {pos.map((ppos, i) => (
-        <Sphear i={i} ppos={ppos} />
+        <Suspense fallback="loading">
+          <Sphear i={i} ppos={ppos} props={props} />
+        </Suspense>
       ))}
       {traj.map((points, i) => {
         return (

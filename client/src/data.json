@@ -14,7 +14,8 @@
       "m": 1,
       "r":  0.004654692513368984,
       "color": "#e4e80e",
-      "name": "Sun"
+      "name": "Sun",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -30,7 +31,8 @@
       "m": 1.6601367952719304e-7,
       "r": 0.000016308155080213903,
       "color": "#d5dedb",
-      "name": "Mecury"
+      "name": "Mecury",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -46,7 +48,8 @@
       "m": 0.0000024478383396645447,
       "r": 0.000040453208556149734,
       "color": "#fcba03",
-      "name": "Venus"
+      "name": "Venus",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -62,7 +65,8 @@
       "m": 0.0000030404326333266026,
       "r": 0.000042586898395721926,
       "color": "#10cdde",
-      "name": "Earth"
+      "name": "Earth",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -78,7 +82,8 @@
       "m": 3.2271514450538743e-7,
       "r": 0.000022657085561497327,
       "color": "#de5110",
-      "name": "Mars"
+      "name": "Mars",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -94,7 +99,8 @@
       "m": 0.0009547919384243222,
       "r": 0.00046731951871657756,
       "color": "#fa8b57",
-      "name": "Jupiter"
+      "name": "Jupiter",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -110,7 +116,8 @@
       "m": 0.0002858859806661029,
       "r": 0.0003892513368983957,
       "color": "#ffec73",
-      "name": "Saturn"
+      "name": "Saturn",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -126,7 +133,8 @@
       "m": 0.000043662440433515637,
       "r": 0.00016953208556149733,
       "color": "#b8fff4",
-      "name": "Uranus"
+      "name": "Uranus",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -142,7 +150,8 @@
       "m": 0.00005151389020535497,
       "r": 0.0001645855614973262,
       "color": "#2e5cf2",
-      "name": "Neptune"
+      "name": "Neptune",
+      "map": "models/mars.glb"
     },
     {
       "x": [
@@ -158,7 +167,8 @@
       "m": 7.396449704142012e-9,
       "r": 0.000007943181818181818,
       "color": "#fffcc2",
-      "name": "Pluto"
+      "name": "Pluto",
+      "map": "models/mars.glb"
     }
   ],
   "G": 2.95912208286e-4
