@@ -4,15 +4,26 @@ import React, {
   useMemo,
   useState,
   useEffect,
-  Suspense
+  Suspense,
 } from "react";
-import ReactDOM from "react-dom";
-import { Canvas, useThree, extend, useFrame } from "react-three-fiber";
-
+import { useThree, extend, useFrame } from "react-three-fiber";
+import {
+  Sun,
+  Mercury,
+  Venus,
+  Earth,
+  Mars,
+  Jupiter,
+  Saturn,
+  Uranus,
+  Neptune,
+  Pluto,
+  SaturnRingBottom,
+  SaturnRingTop,
+} from "./planets";
 import * as tf from "@tensorflow/tfjs";
 import data from "../data.json";
 import { Vector3 } from "three";
-import Sphear from "./Sphear";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
 
@@ -77,7 +88,7 @@ function SolarSystem(props, { dt = 0.1 }) {
   } = useThree();
 
   const controls = useRef();
-  useFrame(() => controls.current.update());
+  useFrame(() => 1);
   //////////////////////////////////////////////
   return (
     <group>
@@ -87,17 +98,96 @@ function SolarSystem(props, { dt = 0.1 }) {
         autoRotate={false}
         enableZoom={true}
       />
-      <ambientLight intensity={1}/>
-      <pointLight intensity={1}/>
+      <ambientLight intensity={0} />
+      <pointLight intensity={1} />
+      <Suspense fallback="loading">
+        <Sun
+          i={0}
+          ppos={pos[0]}
+          props={props}
+          key={`${data.planets[0].name}`}
+        />
+        <Mercury
+          i={1}
+          ppos={pos[1]}
+          props={props}
+          key={`${data.planets[1].name}`}
+        />
+        <Venus
+          i={2}
+          ppos={pos[2]}
+          props={props}
+          key={`${data.planets[2].name}`}
+        />
+        <Earth
+          i={3}
+          ppos={pos[3]}
+          props={props}
+          key={`${data.planets[3].name}`}
+        />
+        <Mars
+          i={4}
+          ppos={pos[4]}
+          props={props}
+          key={`${data.planets[4].name}`}
+        />
+        <Jupiter
+          i={5}
+          ppos={pos[5]}
+          props={props}
+          key={`${data.planets[5].name}`}
+        />
+        <Saturn
+          i={6}
+          ppos={pos[6]}
+          props={props}
+          key={`${data.planets[6].name}`}
+        />
+        {/* <SaturnRingBottom
+          i={6}
+          ppos={pos[6]}
+          props={props}
+          key={`ringTop`}
+        /> */}
+        {/* <SaturnRingTop
+          i={6}
+          ppos={pos[6]}
+          props={props}
+          key={`ringBottom`}
+        /> */}
+        <Uranus
+          i={7}
+          ppos={pos[7]}
+          props={props}
+          key={`${data.planets[7].name}`}
+        />
+        <Neptune
+          i={8}
+          ppos={pos[8]}
+          props={props}
+          key={`${data.planets[8].name}`}
+        />
+        <Pluto
+          i={9}
+          ppos={pos[9]}
+          props={props}
+          key={`${data.planets[9].name}`}
+        />
+      </Suspense>
 
-      {pos.map((ppos, i) => (
-        <Suspense fallback="loading">
-          <Sphear i={i} ppos={ppos} props={props} />
-        </Suspense>
-      ))}
       {traj.map((points, i) => {
         return (
-          <line key={`line-${i}`}>
+          <line
+            key={`line-${i}`}
+            // this code is iffy need to figure it out before impletmenting it
+            // onClick={(e) => {
+            //   props.setDisplay({
+            //     planetname: `${data.planets[i].name}`,
+            //   });
+            //   props.setActive(!props.active);
+            // }}
+            //
+          >
             <geometry
               attach="geometry"
               vertices={points.map((point) => new Vector3(...point))}
@@ -138,4 +228,4 @@ function calcA(x) {
 
   return tf.stack(accelerations);
 }
-export default SolarSystem
+export default SolarSystem;

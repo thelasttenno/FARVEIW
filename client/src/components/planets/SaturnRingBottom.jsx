@@ -1,0 +1,34 @@
+import React, { Fragment, useRef } from "react";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { useFrame, useLoader } from "react-three-fiber";
+
+
+const Saturn = (props) => {
+  const planet = useRef();
+
+  const { nodes } = useLoader(GLTFLoader, `${data.planets[props.i].map}`);
+
+  useFrame(() => (planet.current.rotation.y += 0.0002));
+//   let geometry = nodes.Cube001.geometry;
+  console.log(nodes);
+  return (
+<mesh>
+      ref={planet}
+      visible
+      position={props.ppos}
+      {/* geometry={nodes.RingsBottom.geometry} */}
+      material={nodes.RingsBottom.material}
+      onClick={(e) => {
+        props.props.setDisplay({ planetname: `${data.planets[props.i].name}` });
+        props.props.setActive(!props.active);
+      }}
+      scale={[
+        0.02 * (0.1 / data.planets[props.i].r),
+        0.02 * (0.1 / data.planets[props.i].r),
+        0.02 * (0.1 / data.planets[props.i].r)
+      ]}
+    </mesh>
+  );
+};
+
+export default Saturn;

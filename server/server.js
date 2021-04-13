@@ -14,7 +14,9 @@ app.use(cors());
 
 
 app.get('/planets', NASAtelnet.getPlanetsHandeler);
-
+// axios.get(NASA)
+// FTP REQUEST
+// COMPONENT FOR MATH STUFS THAT I CANT PROGRAM BUT WILL EXPLAIN
 
 app.listen(port, () => {
   console.log(`Server running on ${port}`);

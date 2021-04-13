@@ -1,56 +1,72 @@
 {
   "asset": {
-    "version": "2.0",
-    "generator": "THREE.GLTFExporter"
+    "generator": "Khronos Blender glTF 2.0 I/O",
+    "version": "2.0"
   },
+  "scene": 0,
   "scenes": [
     {
+      "name": "Scene",
       "nodes": [
         0
-      ],
-      "name": "Scene"
+      ]
     }
   ],
-  "scene": 0,
   "nodes": [
     {
-      "name": "Cube008",
-      "mesh": 0
+      "mesh": 0,
+      "name": "Cube.008"
     }
   ],
-  "bufferViews": [
+  "materials": [
     {
-      "buffer": 0,
-      "byteOffset": 0,
-      "byteLength": 24408,
-      "target": 34962,
-      "byteStride": 12
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 24408,
-      "byteLength": 24408,
-      "target": 34962,
-      "byteStride": 12
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 48816,
-      "byteLength": 16272,
-      "target": 34962,
-      "byteStride": 8
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 65088,
-      "byteLength": 18432,
-      "target": 34963
+      "name": "Default OBJ.005",
+      "normalTexture": {
+        "index": 0,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8999999761581421
+      }
     }
   ],
-  "buffers": [
+  "meshes": [
     {
-      "uri": "mars_data.bin",
-      "byteLength": 83520
+      "name": "Cube.001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    },
+    {
+      "source": 1
+    }
+  ],
+  "images": [
+    {
+      "name": "mars_norm.jpg",
+      "uri": "mars_img0.png"
+    },
+    {
+      "name": "mars_diff.jpg",
+      "uri": "mars_img1.png"
     }
   ],
   "accessors": [
@@ -74,103 +90,47 @@
       "bufferView": 1,
       "componentType": 5126,
       "count": 2034,
-      "max": [
-        1,
-        1,
-        1
-      ],
-      "min": [
-        -1,
-        -1,
-        -0.999969482421875
-      ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
       "count": 2034,
-      "max": [
-        1,
-        0.999085009098053
-      ],
-      "min": [
-        0.00017100000695791095,
-        0.002392888069152832
-      ],
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
       "count": 9216,
-      "max": [
-        2033
-      ],
-      "min": [
-        0
-      ],
       "type": "SCALAR"
     }
   ],
-  "materials": [
+  "bufferViews": [
     {
-      "pbrMetallicRoughness": {
-        "metallicFactor": 0,
-        "roughnessFactor": 0.8999999761581421,
-        "baseColorTexture": {
-          "index": 0
-        }
-      },
-      "normalTexture": {
-        "index": 1,
-        "scale": 1
-      },
-      "name": "Default OBJ.005"
-    }
-  ],
-  "textures": [
-    {
-      "sampler": 0,
-      "source": 0
+      "buffer": 0,
+      "byteLength": 24408,
+      "byteOffset": 0
     },
     {
-      "sampler": 1,
-      "source": 1
-    }
-  ],
-  "samplers": [
-    {
-      "magFilter": 9729,
-      "minFilter": 9987
+      "buffer": 0,
+      "byteLength": 24408,
+      "byteOffset": 24408
     },
     {
-      "magFilter": 9729,
-      "minFilter": 9987
-    }
-  ],
-  "images": [
-    {
-      "uri": "mars_img0.png"
+      "buffer": 0,
+      "byteLength": 16272,
+      "byteOffset": 48816
     },
     {
-      "uri": "mars_img1.png"
+      "buffer": 0,
+      "byteLength": 18432,
+      "byteOffset": 65088
     }
   ],
-  "meshes": [
+  "buffers": [
     {
-      "primitives": [
-        {
-          "mode": 4,
-          "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1,
-            "TEXCOORD_0": 2
-          },
-          "indices": 3,
-          "material": 0
-        }
-      ]
+      "uri": "mars_data.bin",
+      "byteLength": 83520
     }
   ]
 }
