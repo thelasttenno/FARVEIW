@@ -16,14 +16,19 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/planets", NASAtelnet.getPlanetsHandeler);
-// axios.get(NASA)
-// FTP REQUEST
+
+// COMPONENT FOR MATH STUFS THAT I CANT PROGRAM BUT WILL EXPLAIN
 function MathConvertions(){
   const fileContent = fs.readFileSync("./public/static/data/orbitals.json");
-  NasaFile = JSON.parse(fileContent);
+  let NasaFile = JSON.parse(fileContent);
   console.log(NasaFile);
+  // here is where i would use a lagrounde formula if i knew/had time to do the calculus
+  // so i could take Nasas data and import it into my three.js scape.
+  // becuase we need a inital Velocity and a intial position that we cant get from NASAs flat data.
+  let FarVeiwFile = NasaFile;
+  fs.writeFileSync("./public/static/data/data.json", JSON.stringify(FarVeiwFile));
 }
-// COMPONENT FOR MATH STUFS THAT I CANT PROGRAM BUT WILL EXPLAIN
+////////////////////////////////////////////////////////
 
 for (let index = 0; index < 1; index++) {
   orbitalUpdater.updateAll();
