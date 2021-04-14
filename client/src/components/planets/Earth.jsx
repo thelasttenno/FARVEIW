@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useFrame, useLoader } from "react-three-fiber";
-// import { Html } from "@react-three/drei"
 
 
 const Earth = (props) => {
@@ -9,7 +8,7 @@ const Earth = (props) => {
 
   const { nodes } = useLoader(GLTFLoader, `${props.props.data.planets[props.i].map}`);
 
-  useFrame(() => (planet.current.rotation.y += 0.0002));
+  useFrame(() => (planet.current.rotation.y += 0.001));
 
   return (
     <mesh
@@ -25,12 +24,6 @@ const Earth = (props) => {
       scale={[.00005 * 2,.00005 * 2,.00005 * 2]}
       
     >
-      {/* <Html scaleFactor={10}>
-        <div class="content">
-          Earth
-        </div>
-      </Html> */}
-
     </mesh>
   );
 };

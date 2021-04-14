@@ -8,7 +8,7 @@ const Mercury = (props) => {
 
   const { nodes } = useLoader(GLTFLoader, `${props.props.data.planets[props.i].map}`);
 
-  useFrame(() => (planet.current.rotation.y += 0.0002));
+  useFrame(() => (planet.current.rotation.y += 0.001));
 
   return (
     <mesh

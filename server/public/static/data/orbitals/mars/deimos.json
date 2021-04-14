@@ -19,16 +19,16 @@
     }
   ],
   "argumentOfPeriapsis": 314.7979839942301,
-  "eccentricity": 0.0002730688026610432,
+  "eccentricity": 0.0001746836482927045,
   "longitudeOfAscendingNode": 78.75446920252135,
-  "semimajor": 23459.80231495007,
-  "semiminor": 23459.801440291543,
+  "semimajor": 23458.9702510179,
+  "semiminor": 23458.969893099966,
   "periapses": {
-    "last": 1618563220307.8733,
+    "last": 1618454600228.5972,
     "next": 1618563220307.8733
   },
   "description": "Deimos (systematic designation: Mars II) is the smaller and outer of the two natural satellites of the planet Mars, the other being Phobos. Deimos has a mean radius of 6.2 km (3.9 mi) and takes 30.3 hours to orbit Mars. In Greek mythology, Deimos is the twin brother of Phobos and personified terror.\n\nDeimos is 23,460 km (14,580 mi) from Mars, much farther than Mars's other moon, Phobos.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Deimos_(moon)).",
   "id": "deimos",
-  "argPeriapsis": 5.598656287200289,
-  "longAscNode": 79.40917154481096
+  "argPeriapsis": 352.0153608466588,
+  "longAscNode": 79.40978368193011
 }

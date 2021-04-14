@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from "react";
 import { Canvas } from "react-three-fiber";
-import ControlPanel from "./components/ControlPanel";
+// import ControlPanel from "./components/ControlPanel";
 import "./styles.scss";
 import PlanetInfo from "./components/PlanetInfo";
 import Skybox from "./components/SkyBox";

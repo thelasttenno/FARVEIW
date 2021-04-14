@@ -20,15 +20,15 @@
     }
   ],
   "argumentOfPeriapsis": 25.58643458205566,
-  "eccentricity": 0.1824199058096322,
+  "eccentricity": 0.1808867137696702,
   "longitudeOfAscendingNode": 47.91381339232119,
-  "semimajor": 0.3697672456943709,
-  "semiminor": 0.3635628163644853,
+  "semimajor": 0.3701325241626263,
+  "semiminor": 0.3640267952313249,
   "periapses": {
     "last": 1657356306040.4153,
     "next": 1870323458522.804
   },
   "description": "Mercury is the smallest and innermost planet in the Solar System. Its orbital period around the Sun of 88 days is the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.\n\nLike Venus, Mercury orbits the Sun within Earth's orbit as an inferior planet, so it can only be seen visually in the morning or the evening sky, and never exceeds 28° away from the Sun. Also, like Venus and the Moon, the planet displays the complete range of phases as it moves around its orbit relative to Earth. Seen from Earth, this cycle of phases reoccurs approximately every 116 days, the so-called synodic period. Although Mercury can appear as a bright star-like object when viewed from Earth, its proximity to the Sun often makes it more difficult to see than Venus.\n\nMercury is gravitationally locked with the Sun in a 3:2 spin-orbit resonance, and rotates in a way that is unique in the Solar System. As seen relative to the fixed stars, it rotates on its axis exactly three times for every two revolutions it makes around the Sun. As seen from the Sun, in a frame of reference that rotates with the orbital motion, it appears to rotate only once every two Mercurian years. An observer on Mercury would therefore see only one day every two years.\n\nMercury's axis has the smallest tilt of any of the Solar System's planets (about ​1⁄30 degree), and its orbital eccentricity is the largest of all known planets in the Solar System. At aphelion, Mercury is about 1.5 times as far from the Sun as it is at perihelion. Mercury's surface appears heavily cratered and is similar in appearance to the Moon's, indicating that it has been geologically inactive for billions of years. Having almost no atmosphere to retain heat, it has surface temperatures that vary diurnally more than on any other planet in the Solar System, ranging from 100 K (−173 °C; −280 °F) at night to 700 K (427 °C; 800 °F) during the day across the equatorial regions. The polar regions are constantly below 180 K (−93 °C; −136 °F). The planet has no known natural satellites.\n\nTwo spacecraft have visited Mercury: Mariner 10 flew by in 1974 and 1975; and MESSENGER, launched in 2004, orbited Mercury over 4,000 times in four years before exhausting its fuel and crashing into the planet's surface on April 30, 2015.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Mercury_(planet)).",
-  "argPeriapsis": 32.63549865309184,
-  "longAscNode": 49.37690325736057
+  "argPeriapsis": 31.96137951670612,
+  "longAscNode": 49.42073277294232
 }
