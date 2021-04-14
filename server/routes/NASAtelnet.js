@@ -1,15 +1,16 @@
+const { TIMEOUT } = require("dns");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
 require("dotenv").config();
 
 function ReadPlanets() {
-  const fileContent = fs.readFileSync("./static/data/data.json");
+  const fileContent = fs.readFileSync("./public/static/data/data.json");
   return JSON.parse(fileContent);
 }
 
 function WritePlanets(Planets) {
-  fs.writeFileSync("./static/data/data.json", JSON.stringify(Planets));
+  fs.writeFileSync("./data.json", JSON.stringify(Planets));
 }
 
 // USE ReadInventory() TO READ FROM FILE INSIDE HANDLER
@@ -17,5 +18,7 @@ function WritePlanets(Planets) {
 
 exports.getPlanetsHandeler = (req, res) => {
   const Planets = ReadPlanets();
-  res.json(Planets);
+  setTimeout(() => {
+    res.json(Planets);
+  }, Math.random() * (8000 - 1000) + 1000);
 };

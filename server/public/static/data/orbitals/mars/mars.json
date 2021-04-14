@@ -1,36 +1,100 @@
 {
-    "name": "Mars",
-    "albedo": 0.17,
-    "sidereal": 1.025957,
-    "radius": 3389.5,
-    "mass": 6.4171e+23,
-    "centralMass": 1.989e+30,
-    "axialTilt": 25.19,
-    "inclination": 5.65,
-    "atmosphere": 12746585,
-    "satellites": [
-        "phobos",
-        "deimos"
-    ],
-    "ephemeris": {
-        "nasaOrbitalCode": "4",
-        "nasaBarycenterCode": "0",
-        "revolutionOrder": "y"
-    },
-    "maps": [
+  "name": "Mars",
+  "albedo": 0.17,
+  "sidereal": 1.025957,
+  "radius": 3389.5,
+  "mass": 6.4171e+23,
+  "centralMass": 1.989e+30,
+  "axialTilt": 25.19,
+  "inclination": 5.65,
+  "atmosphere": 12746585,
+  "satellites": [
+    {
+      "name": "Phobos",
+      "albedo": 0.071,
+      "radius": 11.2667,
+      "mass": 10659000000000000,
+      "centralMass": 6.4171e+23,
+      "axialTilt": 0,
+      "inclination": 1.093,
+      "atmosphere": 10523269,
+      "ephemeris": {
+        "nasaOrbitalCode": "401",
+        "nasaBarycenterCode": "4",
+        "revolutionOrder": "d"
+      },
+      "maps": [
         {
-            "slot": "map",
-            "url": "Mars.jpg"
+          "slot": "map",
+          "url": "Phobos.jpg"
         }
-    ],
-    "argumentOfPeriapsis": 284.8358029011748,
-    "eccentricity": 0.0953722727807235,
-    "longitudeOfAscendingNode": 49.42123745809248,
-    "semimajor": 227582913.31597495079,
-    "semiminor": 226545516.5764200389,
-    "periapses": {
-        "last": 1536722819680.9753,
-        "next": 1596227891033.855
+      ],
+      "argumentOfPeriapsis": 291.9393576881656,
+      "eccentricity": 0.01537099178317446,
+      "longitudeOfAscendingNode": 82.96758792024443,
+      "semimajor": 9377.918901174819,
+      "semiminor": 9376.81098752629,
+      "periapses": {
+        "last": 1508532273186.4795,
+        "next": 1509221388674.8328
+      },
+      "description": "Phobos (*FOH-bəs* or *FOH-bos*, from the Greek *Φόβος.*) (systematic designation: Mars I) is the innermost and larger of the two natural satellites of Mars, the other being Deimos. Both moons were discovered in 1877 by American astronomer Asaph Hall.\n\nPhobos is a small, irregularly shaped object with a mean radius of 11 km (7 mi), and is seven times as massive as the outer moon, Deimos. Phobos is named after the Greek god Phobos, a son of Ares (Mars) and Aphrodite (Venus), and the personification of horror (cf. phobia).\n\nPhobos orbits 6,000 km (3,700 mi) from the Martian surface, closer to its primary body than any other known planetary moon. It is indeed so close that it orbits Mars much faster than Mars rotates, and completes an orbit in just 7 hours and 39 minutes. As a result, from the surface of Mars it appears to rise in the west, move across the sky in 4 hours and 15 minutes or less, and set in the east, twice each Martian day.\n\nPhobos is one of the least reflective bodies in the Solar System, with an albedo of just 0.071. Surface temperatures range from about −4 °C (25 °F) on the sunlit side to −112 °C (−170 °F) on the shadowed side. The defining surface feature is the large impact crater, Stickney, which takes up a substantial proportion of the moon's surface.\n\nImages and models indicate that Phobos may be a rubble pile held together by a thin crust, and that it is being torn apart by tidal interactions. Phobos gets closer to Mars by about 2 meters every one hundred years, and it is predicted that within 30 to 50 million years it will either collide with the planet, or break up into a planetary ring.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Phobos_(moon)).",
+      "id": "phobos"
     },
-    "description": "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the \"Red Planet\" because the reddish iron oxide prevalent on its surface gives it a reddish appearance that is distinctive among the astronomical bodies visible to the naked eye. Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the valleys, deserts, and polar ice caps of Earth.\n\nThe rotational period and seasonal cycles of Mars are likewise similar to those of Earth, as is the tilt that produces the seasons. Mars is the site of Olympus Mons, the largest volcano and second-highest known mountain in the Solar System, and of Valles Marineris, one of the largest canyons in the Solar System. The smooth Borealis basin in the northern hemisphere covers 40% of the planet and may be a giant impact feature. Mars has two moons, Phobos and Deimos, which are small and irregularly shaped. These may be captured asteroids, similar to 5261 Eureka, a Mars trojan.\n\nThere are ongoing investigations assessing the past habitability potential of Mars, as well as the possibility of extant life. Future astrobiology missions are planned, including the Mars 2020 and ExoMars rovers. Liquid water cannot exist on the surface of Mars due to low atmospheric pressure, which is less than 1% of the Earth's, except at the lowest elevations for short periods. The two polar ice caps appear to be made largely of water. The volume of water ice in the south polar ice cap, if melted, would be sufficient to cover the entire planetary surface to a depth of 11 meters (36 ft). In November 2016, NASA reported finding a large amount of underground ice in the Utopia Planitia region of Mars. The volume of water detected has been estimated to be equivalent to the volume of water in Lake Superior.\n\nMars can easily be seen from Earth with the naked eye, as can its reddish coloring. Its apparent magnitude reaches −2.91, which is surpassed only by Jupiter, Venus, the Moon, and the Sun. Optical ground-based telescopes are typically limited to resolving features about 300 kilometers (190 mi) across when Earth and Mars are closest because of Earth's atmosphere.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Mars)."
+    {
+      "name": "Deimos",
+      "albedo": 0.068,
+      "radius": 6.2,
+      "mass": 1476200000000000,
+      "centralMass": 6.4171e+23,
+      "axialTilt": 0,
+      "inclination": 0.93,
+      "atmosphere": 12761507,
+      "ephemeris": {
+        "nasaOrbitalCode": "402",
+        "nasaBarycenterCode": "4",
+        "revolutionOrder": "d"
+      },
+      "maps": [
+        {
+          "slot": "map",
+          "url": "Deimos.jpg"
+        }
+      ],
+      "argumentOfPeriapsis": 314.7979839942301,
+      "eccentricity": 0.0002590453311331469,
+      "longitudeOfAscendingNode": 78.75446920252135,
+      "semimajor": 23458.56713465744,
+      "semiminor": 23458.56634756991,
+      "periapses": {
+        "last": 1508059114051.129,
+        "next": 1508059114051.129
+      },
+      "description": "Deimos (systematic designation: Mars II) is the smaller and outer of the two natural satellites of the planet Mars, the other being Phobos. Deimos has a mean radius of 6.2 km (3.9 mi) and takes 30.3 hours to orbit Mars. In Greek mythology, Deimos is the twin brother of Phobos and personified terror.\n\nDeimos is 23,460 km (14,580 mi) from Mars, much farther than Mars's other moon, Phobos.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Deimos_(moon)).",
+      "id": "deimos"
+    }
+  ],
+  "ephemeris": {
+    "nasaOrbitalCode": "4",
+    "nasaBarycenterCode": "0",
+    "revolutionOrder": "y"
+  },
+  "maps": [
+    {
+      "slot": "map",
+      "url": "Mars.jpg"
+    }
+  ],
+  "argumentOfPeriapsis": 284.8358029011748,
+  "eccentricity": 0.09173675800388303,
+  "longitudeOfAscendingNode": 49.42123745809248,
+  "semimajor": 1.537794784268234,
+  "semiminor": 1.5313103547101867,
+  "periapses": {
+    "last": 1715527329491.8835,
+    "next": 1715527329491.8835
+  },
+  "description": "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the \"Red Planet\" because the reddish iron oxide prevalent on its surface gives it a reddish appearance that is distinctive among the astronomical bodies visible to the naked eye. Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the valleys, deserts, and polar ice caps of Earth.\n\nThe rotational period and seasonal cycles of Mars are likewise similar to those of Earth, as is the tilt that produces the seasons. Mars is the site of Olympus Mons, the largest volcano and second-highest known mountain in the Solar System, and of Valles Marineris, one of the largest canyons in the Solar System. The smooth Borealis basin in the northern hemisphere covers 40% of the planet and may be a giant impact feature. Mars has two moons, Phobos and Deimos, which are small and irregularly shaped. These may be captured asteroids, similar to 5261 Eureka, a Mars trojan.\n\nThere are ongoing investigations assessing the past habitability potential of Mars, as well as the possibility of extant life. Future astrobiology missions are planned, including the Mars 2020 and ExoMars rovers. Liquid water cannot exist on the surface of Mars due to low atmospheric pressure, which is less than 1% of the Earth's, except at the lowest elevations for short periods. The two polar ice caps appear to be made largely of water. The volume of water ice in the south polar ice cap, if melted, would be sufficient to cover the entire planetary surface to a depth of 11 meters (36 ft). In November 2016, NASA reported finding a large amount of underground ice in the Utopia Planitia region of Mars. The volume of water detected has been estimated to be equivalent to the volume of water in Lake Superior.\n\nMars can easily be seen from Earth with the naked eye, as can its reddish coloring. Its apparent magnitude reaches −2.91, which is surpassed only by Jupiter, Venus, the Moon, and the Sun. Optical ground-based telescopes are typically limited to resolving features about 300 kilometers (190 mi) across when Earth and Mars are closest because of Earth's atmosphere.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Mars).",
+  "argPeriapsis": 289.5657212809255,
+  "longAscNode": 49.59866052137018
 }

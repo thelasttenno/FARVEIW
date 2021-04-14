@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useFrame, useLoader } from "react-three-fiber";
+// import { Html } from "@react-three/drei"
 
 
 const Earth = (props) => {
@@ -22,7 +23,13 @@ const Earth = (props) => {
         props.props.setActive(!props.active);
       }}
       scale={[.00005 * 2,.00005 * 2,.00005 * 2]}
+      
     >
+      {/* <Html scaleFactor={10}>
+        <div class="content">
+          Earth
+        </div>
+      </Html> */}
       {/* <sphereBufferGeometry
               args={[props.i === 0 ? 0.2 : props.props.data.planets[props.i].r * 800, 30, 30]}
               attach="geometry"

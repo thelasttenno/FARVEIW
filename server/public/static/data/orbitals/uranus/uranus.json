@@ -1,39 +1,193 @@
 {
-    "name": "Uranus",
-    "albedo": 0.51,
-    "sidereal": -0.71833,
-    "radius": 25362,
-    "mass": 8.681e+25,
-    "centralMass": 1.989e+30,
-    "axialTilt": 97.77,
-    "inclination": 0.77,
-    "atmosphere": 5804449,
-    "satellites": [
-        "ariel",
-        "miranda",
-        "oberon",
-        "titania",
-        "umbriel"
-    ],
-    "ephemeris": {
-        "nasaOrbitalCode": "7",
-        "nasaBarycenterCode": "0",
-        "revolutionOrder": "y"
-    },
-    "maps": [
+  "name": "Uranus",
+  "albedo": 0.51,
+  "sidereal": -0.71833,
+  "radius": 25362,
+  "mass": 8.681e+25,
+  "centralMass": 1.989e+30,
+  "axialTilt": 97.77,
+  "inclination": 0.77,
+  "atmosphere": 5804449,
+  "satellites": [
+    {
+      "name": "Ariel",
+      "albedo": 0.53,
+      "radius": 578.9,
+      "mass": 1.353e+21,
+      "centralMass": 8.681e+25,
+      "axialTilt": 0,
+      "inclination": 0.26,
+      "atmosphere": 8421504,
+      "ephemeris": {
+        "nasaOrbitalCode": "701",
+        "nasaBarycenterCode": "7",
+        "revolutionOrder": "d"
+      },
+      "maps": [
         {
-            "slot": "map",
-            "url": "Uranus.jpg"
+          "slot": "map",
+          "url": "Ariel.jpg"
         }
-    ],
-    "argumentOfPeriapsis": 97.10093681233873,
-    "eccentricity": 0.04737199527143244,
-    "longitudeOfAscendingNode": 74.00200944736554,
-    "semimajor": 2870331038.1469154,
-    "semiminor": 2867108565.77866745,
-    "periapses": {
-        "last": -113961600000,
-        "next": 2544307200000
+      ],
+      "argumentOfPeriapsis": 155.8639968197608,
+      "eccentricity": 0.0005863695456392988,
+      "longitudeOfAscendingNode": 167.6429700618532,
+      "semimajor": 190915.639431505,
+      "semiminor": 190915.60661031218,
+      "periapses": {
+        "last": 1508091755326.6257,
+        "next": 1508302248799.1406
+      },
+      "description": "Ariel is the fourth-largest of the 27 known moons of Uranus. Ariel orbits and rotates in the equatorial plane of Uranus, which is almost perpendicular to the orbit of Uranus and so has an extreme seasonal cycle.\n\nIt was discovered in October 1851 by William Lassell and named for a character in two different pieces of literature. As of 2017, much of the detailed knowledge of Ariel derives from a single flyby of Uranus performed by the spacecraft Voyager 2 in 1986, which managed to image around 35% of the moon's surface. There are no active plans at present to return to study the moon in more detail, although various concepts such as a Uranus orbiter and probe have been proposed from time to time.\n\nAfter Miranda, Ariel is the second-smallest of Uranus' five major rounded satellites and the second-closest to its planet. Among the smallest of the Solar System's 19 known spherical moons (it ranks 14th among them in diameter), it is believed to be composed of roughly equal parts ice and rocky material. Its mass is approximately equal in magnitude to Earth's hydrosphere.\n\nLike all of Uranus' moons, Ariel probably formed from an accretion disc that surrounded the planet shortly after its formation, and, like other large moons, it is likely differentiated, with an inner core of rock surrounded by a mantle of ice. Ariel has a complex surface consisting of extensive cratered terrain cross-cut by a system of scarps, canyons, and ridges. The surface shows signs of more recent geological activity than other Uranian moons, most likely due to tidal heating.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Ariel_(moon)).",
+      "id": "ariel"
     },
-    "description": "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have different bulk chemical composition from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus and Neptune as \"ice giants\" to distinguish them from the gas giants. Uranus's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more \"ices\" such as water, ammonia, and methane, along with traces of other hydrocarbons. It is the coldest planetary atmosphere in the Solar System, with a minimum temperature of 49 K (−224 °C; −371 °F), and has a complex, layered cloud structure with water thought to make up the lowest clouds and methane the uppermost layer of clouds. The interior of Uranus is mainly composed of ices and rock.\n\nUranus is the only planet whose name is derived directly from a figure from Greek mythology, from the Latinised version of the Greek god of the sky Ouranos. Like the other giant planets, Uranus has a ring system, a magnetosphere, and numerous moons. The Uranian system has a unique configuration among those of the planets because its axis of rotation is tilted sideways, nearly into the plane of its solar orbit. Its north and south poles, therefore, lie where most other planets have their equators. In 1986, images from Voyager 2 showed Uranus as an almost featureless planet in visible light, without the cloud bands or storms associated with the other giant planets. Observations from Earth have shown seasonal change and increased weather activity as Uranus approached its equinox in 2007. Wind speeds can reach 250 metres per second (900 km/h; 560 mph).\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Uranus)."
+    {
+      "name": "Miranda",
+      "albedo": 0.32,
+      "radius": 235.8,
+      "mass": 65900000000000000000,
+      "centralMass": 8.681e+25,
+      "axialTilt": 0,
+      "inclination": 4.232,
+      "atmosphere": 8421504,
+      "ephemeris": {
+        "nasaOrbitalCode": "705",
+        "nasaBarycenterCode": "7",
+        "revolutionOrder": "d"
+      },
+      "maps": [
+        {
+          "slot": "map",
+          "url": "Miranda.jpg"
+        }
+      ],
+      "argumentOfPeriapsis": 244.0701800710327,
+      "eccentricity": 0.001314431963182846,
+      "longitudeOfAscendingNode": 172.0696010336766,
+      "semimajor": 129875.8183677679,
+      "semiminor": 129875.70617245563,
+      "periapses": {
+        "last": 1507985848438.427,
+        "next": 1508232090014.8093
+      },
+      "description": "Miranda, also designated Uranus V, is the smallest and innermost of Uranus's five round satellites. It was discovered by Gerard Kuiper on 16 February 1948 at McDonald Observatory, and named after Miranda from William Shakespeare's play The Tempest. Like the other large moons of Uranus, Miranda orbits close to its planet's equatorial plane. Because Uranus orbits the Sun on its side, Miranda's orbit is perpendicular to the ecliptic and shares Uranus's extreme seasonal cycle.\n\nAt just 470 km in diameter, Miranda is one of the smallest closely observed objects in the Solar System that might be in hydrostatic equilibrium (spherical under its own gravity). The only close-up images of Miranda are from the Voyager 2 probe, which made observations of Miranda during its Uranus flyby in January 1986. During the flyby, Miranda's southern hemisphere pointed towards the Sun, so only that part was studied. There are no active plans at present to return to study the moon in more detail, although various concepts such as a Uranus orbiter and probe have been proposed from time to time.\n\nLike all of Uranus' moons, Miranda probably formed from an accretion disc that surrounded the planet shortly after its formation, and, like other large moons, it is likely differentiated, with an inner core of rock surrounded by a mantle of ice. Miranda has one of the most extreme and varied topographies of any object in the Solar System, including Verona Rupes, a 5- to 10-kilometer-high scarp, and chevron-shaped tectonic features called coronae. The origin and evolution of this varied geology, the most of any Uranian satellite, are still not fully understood, and multiple hypotheses exist regarding Miranda's evolution.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Miranda_(moon)).",
+      "id": "miranda"
+    },
+    {
+      "name": "Oberon",
+      "albedo": 0.31,
+      "radius": 761.4,
+      "mass": 3.014e+21,
+      "centralMass": 8.681e+25,
+      "axialTilt": 0,
+      "inclination": 0.058,
+      "atmosphere": 8421504,
+      "ephemeris": {
+        "nasaOrbitalCode": "704",
+        "nasaBarycenterCode": "7",
+        "revolutionOrder": "d"
+      },
+      "maps": [
+        {
+          "slot": "map",
+          "url": "Oberon.jpg"
+        }
+      ],
+      "argumentOfPeriapsis": 164.9351033170295,
+      "eccentricity": 0.0005573604132157858,
+      "longitudeOfAscendingNode": 167.7263622840152,
+      "semimajor": 583450.7259606287,
+      "semiminor": 583450.6353359538,
+      "periapses": {
+        "last": 1507979183564.7405,
+        "next": 1509333318483.4912
+      },
+      "description": "Oberon, also designated Uranus IV, is the outermost major moon of the planet Uranus. It is the second-largest and second most massive of the Uranian moons, and the ninth most massive moon in the Solar System. Discovered by William Herschel in 1787, Oberon is named after the mythical king of the fairies who appears as a character in Shakespeare's A Midsummer Night's Dream. Its orbit lies partially outside Uranus's magnetosphere.\n\nIt is likely that Oberon formed from the accretion disk that surrounded Uranus just after the planet's formation. The moon consists of approximately equal amounts of ice and rock, and is probably differentiated into a rocky core and an icy mantle. A layer of liquid water may be present at the boundary between the mantle and the core. The surface of Oberon, which is dark and slightly red in color, appears to have been primarily shaped by asteroid and comet impacts. It is covered by numerous impact craters reaching 210 km in diameter. Oberon possesses a system of chasmata (graben or scarps) formed during crustal extension as a result of the expansion of its interior during its early evolution.\n\nThe Uranian system has been studied up close only once: the spacecraft Voyager 2 took several images of Oberon in January 1986, allowing 40% of the moon's surface to be mapped.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Oberon_(moon)).",
+      "id": "oberon"
+    },
+    {
+      "name": "Titania",
+      "albedo": 0.35,
+      "radius": 788.4,
+      "mass": 3.527e+21,
+      "centralMass": 8.681e+25,
+      "axialTilt": 0,
+      "inclination": 0.34,
+      "atmosphere": 8421504,
+      "ephemeris": {
+        "nasaOrbitalCode": "703",
+        "nasaBarycenterCode": "7",
+        "revolutionOrder": "d"
+      },
+      "maps": [
+        {
+          "slot": "map",
+          "url": "Titania.jpg"
+        }
+      ],
+      "argumentOfPeriapsis": 229.4612718970353,
+      "eccentricity": 0.002427845604961269,
+      "longitudeOfAscendingNode": 167.6230717443308,
+      "semimajor": 436325.1831235358,
+      "semiminor": 436323.8971765822,
+      "periapses": {
+        "last": 1508514225330.399,
+        "next": 1509252004912.0679
+      },
+      "description": "Titania is the largest of the moons of Uranus and the eighth largest moon in the Solar System at a diameter of 1,578 kilometres (981 mi). Discovered by William Herschel in 1787, Titania is named after the queen of the fairies in Shakespeare's A Midsummer Night's Dream. Its orbit lies inside Uranus's magnetosphere.\n\nTitania consists of approximately equal amounts of ice and rock, and is probably differentiated into a rocky core and an icy mantle. A layer of liquid water may be present at the core–mantle boundary. The surface of Titania, which is relatively dark and slightly red in color, appears to have been shaped by both impacts and endogenic processes. It is covered with numerous impact craters reaching up to 326 kilometres (203 mi) in diameter, but is less heavily cratered than Oberon, outermost of the five large moons of Uranus. Titania probably underwent an early endogenic resurfacing event which obliterated its older, heavily cratered surface. Titania's surface is cut by a system of enormous canyons and scarps, the result of the expansion of its interior during the later stages of its evolution. Like all major moons of Uranus, Titania probably formed from an accretion disk which surrounded the planet just after its formation.\n\nInfrared spectroscopy conducted from 2001 to 2005 revealed the presence of water ice as well as frozen carbon dioxide on the surface of Titania, which in turn suggested that the moon may have a tenuous carbon dioxide atmosphere with a surface pressure of about 10 nanopascals (10−13 bar). Measurements during Titania's occultation of a star put an upper limit on the surface pressure of any possible atmosphere at 1–2 mPa (10–20 nbar).\n\nThe Uranian system has been studied up close only once, by the spacecraft Voyager 2 in January 1986. It took several images of Titania, which allowed mapping of about 40% of its surface.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Titania_(moon)).",
+      "id": "titania"
+    },
+    {
+      "name": "Umbriel",
+      "albedo": 0.26,
+      "radius": 584.7,
+      "mass": 1.172e+21,
+      "centralMass": 8.681e+25,
+      "axialTilt": 0,
+      "inclination": 0.128,
+      "atmosphere": 8421504,
+      "ephemeris": {
+        "nasaOrbitalCode": "702",
+        "nasaBarycenterCode": "7",
+        "revolutionOrder": "d"
+      },
+      "maps": [
+        {
+          "slot": "map",
+          "url": "Umbriel.jpg"
+        }
+      ],
+      "argumentOfPeriapsis": 31.88166875314568,
+      "eccentricity": 0.003387290235028168,
+      "longitudeOfAscendingNode": 167.6873854927646,
+      "semimajor": 265984.7575359356,
+      "semiminor": 265983.2316122295,
+      "periapses": {
+        "last": 1507948254218.924,
+        "next": 1508304564752.7024
+      },
+      "description": "Umbriel is a moon of Uranus discovered on October 24, 1851, by William Lassell. It was discovered at the same time as Ariel and named after a character in Alexander Pope's poem The Rape of the Lock. Umbriel consists mainly of ice with a substantial fraction of rock, and may be differentiated into a rocky core and an icy mantle. The surface is the darkest among Uranian moons, and appears to have been shaped primarily by impacts. However, the presence of canyons suggests early endogenic processes, and the moon may have undergone an early endogenically driven resurfacing event that obliterated its older surface.\n\nCovered by numerous impact craters reaching 210 km (130 mi) in diameter, Umbriel is the second most heavily cratered satellite of Uranus after Oberon. The most prominent surface feature is a ring of bright material on the floor of Wunda crater. This moon, like all moons of Uranus, probably formed from an accretion disk that surrounded the planet just after its formation. The Uranian system has been studied up close only once, by the spacecraft Voyager 2 in January 1986. It took several images of Umbriel, which allowed mapping of about 40% of the moon’s surface.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Umbriel_(moon)).",
+      "id": "umbriel"
+    }
+  ],
+  "ephemeris": {
+    "nasaOrbitalCode": "7",
+    "nasaBarycenterCode": "0",
+    "revolutionOrder": "y"
+  },
+  "maps": [
+    {
+      "slot": "map",
+      "url": "Uranus.jpg"
+    }
+  ],
+  "argumentOfPeriapsis": 97.10093681233873,
+  "eccentricity": 0.04729770910292688,
+  "longitudeOfAscendingNode": 74.00200944736554,
+  "semimajor": 19.18812825042603,
+  "semiminor": 19.166653609052627,
+  "periapses": {},
+  "description": "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have different bulk chemical composition from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus and Neptune as \"ice giants\" to distinguish them from the gas giants. Uranus's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more \"ices\" such as water, ammonia, and methane, along with traces of other hydrocarbons. It is the coldest planetary atmosphere in the Solar System, with a minimum temperature of 49 K (−224 °C; −371 °F), and has a complex, layered cloud structure with water thought to make up the lowest clouds and methane the uppermost layer of clouds. The interior of Uranus is mainly composed of ices and rock.\n\nUranus is the only planet whose name is derived directly from a figure from Greek mythology, from the Latinised version of the Greek god of the sky Ouranos. Like the other giant planets, Uranus has a ring system, a magnetosphere, and numerous moons. The Uranian system has a unique configuration among those of the planets because its axis of rotation is tilted sideways, nearly into the plane of its solar orbit. Its north and south poles, therefore, lie where most other planets have their equators. In 1986, images from Voyager 2 showed Uranus as an almost featureless planet in visible light, without the cloud bands or storms associated with the other giant planets. Observations from Earth have shown seasonal change and increased weather activity as Uranus approached its equinox in 2007. Wind speeds can reach 250 metres per second (900 km/h; 560 mph).\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Uranus).",
+  "argPeriapsis": 97.07952995868696,
+  "longAscNode": 74.00330286807089
 }
