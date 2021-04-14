@@ -19,16 +19,16 @@
     }
   ],
   "argumentOfPeriapsis": 164.9351033170295,
-  "eccentricity": 0.001457046920269169,
+  "eccentricity": 0.001457001188545759,
   "longitudeOfAscendingNode": 167.7263622840152,
-  "semimajor": 583478.6059827252,
-  "semiminor": 583477.9866240199,
+  "semimajor": 583478.5562484472,
+  "semiminor": 583477.9369286733,
   "periapses": {
     "last": 1618423628533.6243,
     "next": 1619575490374.8215
   },
   "description": "Oberon, also designated Uranus IV, is the outermost major moon of the planet Uranus. It is the second-largest and second most massive of the Uranian moons, and the ninth most massive moon in the Solar System. Discovered by William Herschel in 1787, Oberon is named after the mythical king of the fairies who appears as a character in Shakespeare's A Midsummer Night's Dream. Its orbit lies partially outside Uranus's magnetosphere.\n\nIt is likely that Oberon formed from the accretion disk that surrounded Uranus just after the planet's formation. The moon consists of approximately equal amounts of ice and rock, and is probably differentiated into a rocky core and an icy mantle. A layer of liquid water may be present at the boundary between the mantle and the core. The surface of Oberon, which is dark and slightly red in color, appears to have been primarily shaped by asteroid and comet impacts. It is covered by numerous impact craters reaching 210 km in diameter. Oberon possesses a system of chasmata (graben or scarps) formed during crustal extension as a result of the expansion of its interior during its early evolution.\n\nThe Uranian system has been studied up close only once: the spacecraft Voyager 2 took several images of Oberon in January 1986, allowing 40% of the moon's surface to be mapped.\n\nExcerpt via [Wikipedia](https://en.wikipedia.org/wiki/Oberon_(moon)).",
   "id": "oberon",
-  "argPeriapsis": 146.7279209721938,
-  "longAscNode": 167.7191292611481
+  "argPeriapsis": 146.7322370722122,
+  "longAscNode": 167.7191292716226
 }
