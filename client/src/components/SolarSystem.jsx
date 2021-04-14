@@ -142,18 +142,6 @@ const initialTraj = xInitialArray.map((x) => Array(trajSize).fill(x));
           props={props}
           key={`${data.planets[6].name}`}
         />
-        {/* <SaturnRingBottom
-          i={6}
-          ppos={pos[6]}
-          props={props}
-          key={`ringTop`}
-        /> */}
-        {/* <SaturnRingTop
-          i={6}
-          ppos={pos[6]}
-          props={props}
-          key={`ringBottom`}
-        /> */}
         <Uranus
           i={7}
           ppos={pos[7]}

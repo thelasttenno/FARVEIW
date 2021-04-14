@@ -9,7 +9,7 @@ const Uranus = (props) => {
   const { nodes } = useLoader(GLTFLoader, `${props.props.data.planets[props.i].map}`);
 
   useFrame(() => (planet.current.rotation.y += 0.002));
-//   let geometry = nodes.Cube001.geometry;
+
   return (
     <mesh
       ref={planet}
@@ -24,10 +24,6 @@ const Uranus = (props) => {
       scale={[(.00005 * 2) * 4 ,(.00005 * 2) * 4,(.00005 * 2) * 4]}
 
     >
-      {/* <sphereBufferGeometry
-              args={[props.i === 0 ? 0.2 : props.props.data.planets[props.i].r * 800, 30, 30]}
-              attach="geometry"
-            /> */}
     </mesh>
   );
 };

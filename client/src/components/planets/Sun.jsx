@@ -9,9 +9,6 @@ const Sun = (props) => {
   const { nodes } = useLoader(GLTFLoader, `${props.props.data.planets[props.i].map}`);
 
   useFrame(() => (planet.current.rotation.y += 0.0002));
-//   let geometry = nodes.Cube001.geometry;
-//   console.log(geometry);
-    let active = true;
   return (
     <mesh
       ref={planet}
