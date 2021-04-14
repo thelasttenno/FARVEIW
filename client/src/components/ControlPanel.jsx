@@ -1,7 +1,6 @@
 import React, {
     Component
   } from "react";
-// import data from "../data.json";
 
 
 class ControlPanel extends Component{

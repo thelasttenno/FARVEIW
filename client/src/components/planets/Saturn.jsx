@@ -8,7 +8,7 @@ const Saturn = (props) => {
   const RingTop = useRef();
   const RingBottom = useRef();
 
-  const { nodes } = useLoader(GLTFLoader, `${data.planets[props.i].map}`);
+  const { nodes } = useLoader(GLTFLoader, `${props.props.data.planets[props.i].map}`);
 
   useFrame(() => (planet.current.rotation.y += 0.0002));
 //   let geometry = nodes.Cube001.geometry;
@@ -21,13 +21,14 @@ const Saturn = (props) => {
       geometry={nodes.Saturn001.geometry}
       material={nodes.Saturn001.material}
       onClick={(e) => {
-        props.props.setDisplay({ planetname: `${data.planets[props.i].name}` });
+        props.props.setDisplay({ planetname: `${props.props.data.planets[props.i].name}` });
         props.props.setActive(!props.active);
       }}
-      scale={[.00005,.00005,.00005]}
+      scale={[(.00005 * 2) * 9.1,(.00005 * 2) * 9.1,(.00005 * 2) * 9.1]}
+
     >
       {/* <sphereBufferGeometry
-              args={[props.i === 0 ? 0.2 : data.planets[props.i].r * 800, 30, 30]}
+              args={[props.i === 0 ? 0.2 : props.props.data.planets[props.i].r * 800, 30, 30]}
               attach="geometry"
             /> */}
     </mesh>
@@ -38,7 +39,7 @@ const Saturn = (props) => {
       {/* geometry={nodes.RingsTop.geometry} */}
       {/* material={nodes.RingsTop.material} */}
       onClick={(e) => {
-        props.props.setDisplay({ planetname: `${data.planets[props.i].name}` });
+        props.props.setDisplay({ planetname: `${props.props.data.planets[props.i].name}` });
         props.props.setActive(!props.active);
       }}
       scale={[.00005,.00005,.00005]}
@@ -50,7 +51,7 @@ const Saturn = (props) => {
       {/* geometry={nodes.RingsBottom.geometry} */}
       {/* material={nodes.RingsBottom.material} */}
       onClick={(e) => {
-        props.props.setDisplay({ planetname: `${data.planets[props.i].name}` });
+        props.props.setDisplay({ planetname: `${props.props.data.planets[props.i].name}` });
         props.props.setActive(!props.active);
       }}
       scale={[.00005,.00005,.00005]}

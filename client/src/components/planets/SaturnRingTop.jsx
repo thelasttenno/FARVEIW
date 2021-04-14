@@ -6,7 +6,7 @@ import { useFrame, useLoader } from "react-three-fiber";
 const Saturn = (props) => {
   const planet = useRef();
 
-  const { nodes } = useLoader(GLTFLoader, `${data.planets[props.i].map}`);
+  const { nodes } = useLoader(GLTFLoader, `${props.props.data.planets[props.i].map}`);
 
   useFrame(() => (planet.current.rotation.y += 0.0002));
 //   let geometry = nodes.Cube001.geometry;
@@ -19,13 +19,13 @@ const Saturn = (props) => {
       {/* geometry={nodes.RingsTop.geometry} */}
       {/* material={nodes.RingsTop.material} */}
       onClick={(e) => {
-        props.props.setDisplay({ planetname: `${data.planets[props.i].name}` });
+        props.props.setDisplay({ planetname: `${props.props.data.planets[props.i].name}` });
         props.props.setActive(!props.active);
       }}
       scale={[
-        0.02 * (0.1 / data.planets[props.i].r),
-        0.02 * (0.1 / data.planets[props.i].r),
-        0.02 * (0.1 / data.planets[props.i].r)
+        0.02 * (0.1 / props.props.data.planets[props.i].r),
+        0.02 * (0.1 / props.props.data.planets[props.i].r),
+        0.02 * (0.1 / props.props.data.planets[props.i].r)
       ]}
     </mesh>
   );

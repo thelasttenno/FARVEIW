@@ -22,25 +22,24 @@ import {
   SaturnRingTop,
 } from "./planets";
 import * as tf from "@tensorflow/tfjs";
-import data from "../data.json";
 import { Vector3 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
 
+
+function SolarSystem(props, { dt = 0.1 }) {
+let data = props.data;
 const numberOfPlanets = data.planets.length;
 
-const xInitialArray = data.planets.map((planet) => planet.x);
-const vInitialArray = data.planets.map((planet) => planet.v);
-const masses = data.planets.map((planet) => planet.m);
+const xInitialArray = data.planets.map((planet) => planet.x.map((xyz)=> xyz * 1));
+const vInitialArray = data.planets.map((planet) => planet.v.map((xyz)=> xyz * 1));
+const masses = data.planets.map((planet) => planet.m * 1);
 
 const xInitial = tf.tensor2d(xInitialArray, [numberOfPlanets, 3]);
 const vInitial = tf.tensor2d(vInitialArray, [numberOfPlanets, 3]);
 const G = tf.scalar(data.G);
-
-const trajSize = 240;
+const trajSize = 480;
 const initialTraj = xInitialArray.map((x) => Array(trajSize).fill(x));
-
-function SolarSystem(props, { dt = 0.1 }) {
   const [pos, setPos] = useState(xInitialArray);
   const [traj, setTraj] = useState(initialTraj);
   const x = useRef(xInitial);
@@ -202,30 +201,31 @@ function SolarSystem(props, { dt = 0.1 }) {
       })}
     </group>
   );
-}
-
-function calcA(x) {
-  const unstackedX = tf.unstack(x);
-  const accelerations = Array(numberOfPlanets).fill(tf.tensor1d([0, 0, 0]));
-
-  for (let i = 0; i < numberOfPlanets; i++) {
-    const iX = unstackedX[i];
-    for (let j = i + 1; j < numberOfPlanets; j++) {
-      const jX = unstackedX[j];
-      const vector = tf.sub(jX, iX);
-      const r = tf.norm(vector);
-
-      const force = G.mul(masses[i])
-        .mul(masses[j])
-        .div(tf.pow(r, 3))
-        .mul(vector);
-      accelerations[i] = accelerations[i].add(force);
-      accelerations[j] = accelerations[j].sub(force);
+  function calcA(x) {
+    const unstackedX = tf.unstack(x);
+    const accelerations = Array(numberOfPlanets).fill(tf.tensor1d([0, 0, 0]));
+  
+    for (let i = 0; i < numberOfPlanets; i++) {
+      const iX = unstackedX[i];
+      for (let j = i + 1; j < numberOfPlanets; j++) {
+        const jX = unstackedX[j];
+        const vector = tf.sub(jX, iX);
+        const r = tf.norm(vector);
+  
+        const force = G.mul(masses[i])
+          .mul(masses[j])
+          .div(tf.pow(r, 3))
+          .mul(vector);
+        accelerations[i] = accelerations[i].add(force);
+        accelerations[j] = accelerations[j].sub(force);
+      }
+  
+      accelerations[i] = accelerations[i].div(masses[i]);
     }
-
-    accelerations[i] = accelerations[i].div(masses[i]);
+  
+    return tf.stack(accelerations);
   }
-
-  return tf.stack(accelerations);
 }
+
+
 export default SolarSystem;

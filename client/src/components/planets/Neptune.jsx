@@ -6,7 +6,7 @@ import { useFrame, useLoader } from "react-three-fiber";
 const Neptune = (props) => {
   const planet = useRef();
 
-  const { nodes } = useLoader(GLTFLoader, `${data.planets[props.i].map}`);
+  const { nodes } = useLoader(GLTFLoader, `${props.props.data.planets[props.i].map}`);
 
   useFrame(() => (planet.current.rotation.y += 0.0002));
 //   let geometry = nodes.Cube001.geometry;
@@ -18,13 +18,14 @@ const Neptune = (props) => {
       geometry={nodes.Neptune.geometry}
       material={nodes.Neptune.material}
       onClick={(e) => {
-        props.props.setDisplay({ planetname: `${data.planets[props.i].name}` });
+        props.props.setDisplay({ planetname: `${props.props.data.planets[props.i].name}` });
         props.props.setActive(!props.active);
       }}
-      scale={[.00005,.00005,.00005]}
+      scale={[(.00005 * 2) * 3.9 ,(.00005 * 2) * 3.9 ,(.00005 * 2) * 3.9]}
+
     >
       {/* <sphereBufferGeometry
-              args={[props.i === 0 ? 0.2 : data.planets[props.i].r * 800, 30, 30]}
+              args={[props.i === 0 ? 0.2 : props.props.data.planets[props.i].r * 800, 30, 30]}
               attach="geometry"
             /> */}
     </mesh>

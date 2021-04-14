@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import data from "../data.json";
 
 class PlanetInfo extends Component {
   constructor(props) {
     super(props);
-    this.state = { found: data.planets.find(({name}) => name === `${this.props.display.planetname}`)};
+    this.state = { found: this.props.data.planets.find(({name}) => name === `${this.props.display.planetname}`)};
   }
   componentDidUpdate(){
     if(this.state.found.name !== `${this.props.display.planetname}`){
       this.setState({
-        found: data.planets.find(({name}) => name === `${this.props.display.planetname}`)
+        found: this.props.data.planets.find(({name}) => name === `${this.props.display.planetname}`)
       })
     }
   }
